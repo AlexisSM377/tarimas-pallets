@@ -1,0 +1,17 @@
+GET http://localhost:1337/api/madera-categories?fields[0]=name&fields[1]=slug&populate[mainImage][fields][0]=url
+Authorization: Bearer dc1bd0a6ab92a38900d5f0b2b8b2eadb0cff3346f1a1b35b6471fb732ae8c0363ccfc6e506549001e62c2c44f828dbc27f301cd7ea53a768f4d1c1054e2a0237db64bb0143821857d31fd6ec7968c6fff4cb1c1c2f229efde48d1cd434521101930858c02a42dfde552f12a70598f97d335b6c8c6faa0b4393dfbcbcf2322425
+
+###
+GET http://localhost:1337/api/products?fields[0]=productName&fields[1]=slug&fields[2]=description&fields[3]=price&fields[4]=stock&populate[images][fields][0]=url
+Authorization: Bearer dc1bd0a6ab92a38900d5f0b2b8b2eadb0cff3346f1a1b35b6471fb732ae8c0363ccfc6e506549001e62c2c44f828dbc27f301cd7ea53a768f4d1c1054e2a0237db64bb0143821857d31fd6ec7968c6fff4cb1c1c2f229efde48d1cd434521101930858c02a42dfde552f12a70598f97d335b6c8c6faa0b4393dfbcbcf2322425
+
+###
+GET http://localhost:1337/api/about?fields[0]=nameCompany&fields[1]=description&fields[2]=mission&fields[3]=vision&fields[4]=values&populate[logo][fields][0]=url
+Authorization: Bearer dc1bd0a6ab92a38900d5f0b2b8b2eadb0cff3346f1a1b35b6471fb732ae8c0363ccfc6e506549001e62c2c44f828dbc27f301cd7ea53a768f4d1c1054e2a0237db64bb0143821857d31fd6ec7968c6fff4cb1c1c2f229efde48d1cd434521101930858c02a42dfde552f12a70598f97d335b6c8c6faa0b4393dfbcbcf2322425
+
+###
+GET http://localhost:1337/api/products?filters[slug][$eq]=tarima-nueva-de-3-barrotes-con-saque&populate=*
+Authorization: Bearer dc1bd0a6ab92a38900d5f0b2b8b2eadb0cff3346f1a1b35b6471fb732ae8c0363ccfc6e506549001e62c2c44f828dbc27f301cd7ea53a768f4d1c1054e2a0237db64bb0143821857d31fd6ec7968c6fff4cb1c1c2f229efde48d1cd434521101930858c02a42dfde552f12a70598f97d335b6c8c6faa0b4393dfbcbcf2322425
+
+
+
