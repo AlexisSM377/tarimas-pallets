@@ -1,11 +1,12 @@
 'use client'
-import { CarouselProductImage } from "@/app/product/[productSlug]/components/carousel-product-image";
-import { InfoProduct } from "@/app/product/[productSlug]/components/info-product";
-import { useGetProductsBySlug } from "@/lib/get-product-by-slug";
 
+import { useGetProductsBySlug } from "@/lib/get-product-by-slug";
 import { ResultType } from "@/types/response";
 import { useParams } from "next/navigation";
+import { CarouselProductImage } from "./components/carousel-product-image";
+import { InfoProduct } from "./components/info-product";
 import SkeletonProduct from "./components/skeleton-product";
+
 
 export default function Page() {
 
@@ -24,7 +25,7 @@ export default function Page() {
                 <div >
                     <CarouselProductImage images={result[0].images} />
                 </div>
-                <div className="sm:px-12 mt-2">
+                <div className="sm:px-12 mt-2 space-y-4">
                     <InfoProduct product={result[0]} />
                 </div>
             </div>

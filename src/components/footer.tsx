@@ -3,13 +3,13 @@ import Link from "next/link"
 
 export const Footer = () => {
     return (
-        <footer className=" py-12 pt-16 px-4  text-gray-300">
+        <footer className=" py-12 pt-16 px-4  ">
             <div className="container max-w-7xl mx-auto">
                 <div className="flex justify-center gap-8 flex-col md:flex-row">
                     <div >
                         <div className="flex items-center justify-center gap-2 mb-4">
                             <Trees className="h-6 w-6 text-amber-500" />
-                            <span className="text-xl font-bold ">Tarimas y Pallets México</span>
+                            <span className="text-xl font-bold">Tarimas y Pallets México</span>
                         </div>
                         <p className="text-sm">
                             Ofrecemos la mejor selección de maderas para tus proyectos, con calidad garantizada y servicio

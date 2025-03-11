@@ -14,9 +14,12 @@ export const MaderaCategory = () => {
     return (
         <div className="max-w-5xl py-24 mx-auto sm:py-24 px-4">
             <div>
-                <h1 className="px-6 pb-4 text-xl sm:pb-8 sm:text-4xl text-center font-bold">
+                <h2 className="px-6 pb-4 text-xl sm:pb-8 sm:text-3xl text-center font-bold">
                     Categorías de madera
-                </h1>
+                </h2>
+                <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+                    Aquí encontrarás todas las categorías de productos que manejamos.
+                </p>
                 <Link href='' className="flex justify-end text-blue-500 text-lg font-bold">Ver todas</Link>
             </div>
             <div className="grid gap-5 sm:grid-cols-3">

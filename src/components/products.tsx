@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import { Button } from "./ui/button"
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
 import { useGetProducts } from "@/lib/get-products"
 import { ResultType } from "@/types/response"
 import { SkeletonSchema } from "./skeletonSchema"
@@ -60,6 +60,8 @@ export const Products = () => {
                         )}
 
                     </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext className="hidden sm:flex" />
 
                 </Carousel>
 
@@ -67,7 +69,7 @@ export const Products = () => {
 
 
                 <div className="mt-12 text-center">
-                    <Button size="lg" >
+                    <Button size="lg" onClick={() => router.push("/madera")}>
                         Ver Catálogo Completo
                     </Button>
                 </div>

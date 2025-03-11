@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export function useGetProducts() {
+export function useGetCategoryProduct(slug: string | string[]) {
   // En componentes cliente debes usar variables con prefijo NEXT_PUBLIC_
   const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
   const strapiToken = process.env.NEXT_PUBLIC_STRAPI_TOKEN; // También debe tener prefijo NEXT_PUBLIC_
@@ -18,7 +18,7 @@ export function useGetProducts() {
         return;
       }
 
-      const url = `${backendUrl}/api/products?fields[0]=productName&fields[1]=slug&fields[2]=description&fields[3]=price&fields[4]=stock&populate[images][fields][0]=url&populate[madera_category][fields][0]=name&populate[madera_category][fields][1]=slug`;
+      const url = `${backendUrl}/api/products?populate=*&filters[madera_category][slug][$eq]=${slug}`;
 
       try {
         const headers: HeadersInit = {
@@ -46,7 +46,7 @@ export function useGetProducts() {
     }
 
     fetchData();
-  }, [backendUrl, strapiToken]);
+  }, [backendUrl, strapiToken, slug]);
 
   return { result, loading, error };
 }

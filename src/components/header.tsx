@@ -71,8 +71,8 @@ export const Header = () => {
                     >
                         <div className="flex items-center justify-center p-2 cursor-pointer group">
                             <div className="space-y-2">
-                                <span className={cn('block h-1 w-8 origin-center rounded-full bg-white/60 transition-transform ease-in-out', { 'translate-y-1.5 rotate-45': isNavbarOpen })}></span>
-                                <span className={cn('block h-1 w-8 origin-center rounded-full bg-white/60 transition-transform ease-in-out', { 'w-8 -translate-y-1.5 -rotate-45': isNavbarOpen })}></span>
+                                <span className={cn('block h-1 w-8 origin-center rounded-full bg-amber-500 transition-transform ease-in-out', { 'translate-y-1.5 rotate-45': isNavbarOpen })}></span>
+                                <span className={cn('block h-1 w-8 origin-center rounded-full bg-amber-500 transition-transform ease-in-out', { 'w-8 -translate-y-1.5 -rotate-45': isNavbarOpen })}></span>
                             </div>
                         </div>
                     </button>
@@ -87,15 +87,19 @@ export const Header = () => {
 
 const NAV_ITEMS = [
     {
-        href: "/",
+        href: "/madera",
         title: 'Productos'
+    },
+    {
+        href: "/categories",
+        title: 'Categorías'
     },
     {
         href: "/about",
         title: 'Nosotros'
     },
     {
-        href: "/",
+        href: "/#contacto",
         title: 'Contacto'
     }
 ]

@@ -43,7 +43,7 @@ export const Contact = () => {
                         </form>
                     </div> */}
 
-                    <div className="bg-white dark:bg-[#161616] p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+                    <div className="bg-[#161616] dark:text-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
                         <div>
                             <h3 className="text-xl font-semibold mb-6">Información de Contacto</h3>
                             <div className="space-y-4">

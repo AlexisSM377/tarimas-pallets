@@ -19,4 +19,8 @@ export type ProductType = {
       url: string;
     }
   ];
+  madera_category: {
+    name: string;
+    slug: string;
+  };
 };

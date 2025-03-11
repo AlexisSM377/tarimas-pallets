@@ -1,3 +1,4 @@
+import { LinkWhatsapp } from "@/components/linkWhatsapp"
 import { Separator } from "@/components/ui/separator"
 import { formatPrice } from "@/lib/format-price"
 import { ProductType } from "@/types/product"
@@ -52,6 +53,13 @@ export const InfoProduct = (props: InfoProductProps) => {
                     <h2 className="text-lg">Stock:</h2>
                     <p className="text-lg font-medium ml-2">{product.stock}</p>
                 </div>
+            </div>
+
+            <Separator className="my-4" />
+            <div className="space-y-2">
+                <p className="text-lg font-semibold">¿Te interesa este producto?</p>
+                <LinkWhatsapp style="transparent" />
+
             </div>
         </div>
 
