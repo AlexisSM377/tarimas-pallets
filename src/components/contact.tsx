@@ -5,8 +5,8 @@ import { Textarea } from "./ui/textarea"
 
 export const Contact = () => {
     return (
-        <section id="contacto" className="max-w-5xl py-24 mx-auto  px-4 ">
-            <div className="container">
+        <section id="contacto" className=" max-w-5xl py-24 mx-auto  px-4 ">
+            <div className="">
                 <h2 className="text-3xl font-bold text-center mb-12">Contáctanos</h2>
 
                 <div >
@@ -43,7 +43,7 @@ export const Contact = () => {
                         </form>
                     </div> */}
 
-                    <div className="bg-[#161616] dark:text-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+                    <div className="bg-[#161616] dark:text-white p-8 rounded-lg shadow-sm">
                         <div>
                             <h3 className="text-xl font-semibold mb-6">Información de Contacto</h3>
                             <div className="space-y-4">

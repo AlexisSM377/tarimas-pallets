@@ -1,8 +1,13 @@
+'use client'
 import Image from "next/image"
 import { Button } from "./ui/button"
 import { ChevronRight } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { LinkWhatsapp } from "./linkWhatsapp"
 
 export const Hero = () => {
+    const router = useRouter()
+
     return (
         <section className="relative pt-32 max-w-7xl mx-auto px-4">
 
@@ -25,13 +30,12 @@ export const Hero = () => {
                             Ofrecemos la mejor selección de maderas nacionales e importadas para construcción, carpintería y
                             decoración.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 w-40 justify-center mx-auto">
-                            <Button size="lg" className="bg-amber-700 hover:bg-amber-800 text-white font-medium">
-                                Ver Catálogo <ChevronRight className="ml-2 h-4 w-4" />
+                        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                            <Button onClick={() => router.push('/productos')} className="p-6">
+                                <span className="text-base font-semibold">Ver Productos</span>
+                                <ChevronRight size={20} />
                             </Button>
-                            <Button size="lg" variant="outline" className="bg-white/10 text-black font-medium hover:bg-white/20 border-white">
-                                Contactar Ahora
-                            </Button>
+                            <LinkWhatsapp style="black" />
                         </div>
                     </div>
                 </div>

@@ -58,7 +58,7 @@ export const InfoProduct = (props: InfoProductProps) => {
             <Separator className="my-4" />
             <div className="space-y-2">
                 <p className="text-lg font-semibold">¿Te interesa este producto?</p>
-                <LinkWhatsapp style="transparent" />
+                <LinkWhatsapp style="yellow" />
 
             </div>
         </div>

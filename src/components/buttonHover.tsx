@@ -12,7 +12,7 @@ interface ButtonHoverProps {
 const STYLES: Record<string, string> = {
     white: "text-black hover:bg-black hover:text-white",
     black: "text-white bg-black border-black hover:bg-white hover:border-black hover:text-black",
-    yellow: "text-black bg-yellow-500 border-yellow-500 hover:bg-white hover:border-black flex items-center",
+    yellow: "text-black bg-[#ade175] border-[#ade175] hover:bg-white hover:border-black flex items-center",
     transparent: "text-white bg-transparent border-white hover:bg-white hover:text-black",
 } as const;
 
@@ -24,7 +24,7 @@ export const ButtonHover = (props: ButtonHoverProps) => {
     return (
         <Component
             className={[
-                "px-5 py-3 border flex justify-center gap-2 transition items-center",
+                "px-5 py-3 border flex justify-center gap-2 transition items-center rounded-md",
                 currentStyle,
                 className,
                 style !== "yellow" ? "effect01" : "",

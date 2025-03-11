@@ -18,7 +18,7 @@ export const Products = () => {
     const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL
     return (
         <section id="productos" className="py-16 max-w-5xl mx-auto px-4">
-            <div className="container">
+            <div >
                 <h2 className="text-3xl font-bold text-center mb-4">Nuestros Productos</h2>
                 <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
                     Disponemos de una amplia variedad de maderas para satisfacer todas tus necesidades

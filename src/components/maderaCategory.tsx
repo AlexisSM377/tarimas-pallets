@@ -5,6 +5,7 @@ import { CategoryType } from "@/types/category"
 import { ResultType } from "@/types/response"
 import Link from "next/link"
 import { Card, CardContent } from "./ui/card"
+import { SkeletonSchema } from "./skeletonSchema"
 
 export const MaderaCategory = () => {
 
@@ -23,7 +24,10 @@ export const MaderaCategory = () => {
                 <Link href='' className="flex justify-end text-blue-500 text-lg font-bold">Ver todas</Link>
             </div>
             <div className="grid gap-5 sm:grid-cols-3">
-                {!loading && result !== undefined && (
+                {loading && (
+                    <SkeletonSchema grid={3} />
+                )}
+                {result !== null && (
                     result.slice(0, 3).map((category: CategoryType) => (
                         <Link
                             key={category.id}

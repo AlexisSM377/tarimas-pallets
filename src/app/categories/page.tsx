@@ -1,5 +1,6 @@
 'use client'
 import { CategoryCard } from "@/components/categoryCard"
+import { SkeletonSchema } from "@/components/skeletonSchema"
 import { useGetCategoryMadera } from "@/lib/get-madera-category"
 import { CategoryType } from "@/types/category"
 import { ResultType } from "@/types/response"
@@ -28,6 +29,9 @@ export default function Page() {
             )}
             <div className="sm:flex sm:justify-center sm:items-center">
                 <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-2">
+                    {loading && (
+                        <SkeletonSchema grid={3} />
+                    )}
 
                     {result !== null && result.map((category: CategoryType) => (
                         <CategoryCard key={category.id} category={category} />
